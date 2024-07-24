@@ -1,0 +1,336 @@
+/* CSS For Index Page */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4f7c1;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 20px; 
+    z-index: 1000;
+    background-color: #e4f7c1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-container {
+    flex: 0 0 auto;
+}
+
+header h1 {
+    margin-right: 20px;
+}
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    margin-left: 5px; 
+}
+header img {
+    height: 40px; 
+    vertical-align: middle;
+}
+nav.right-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Aligns the nav content to the right */
+    background-color: transparent;
+}
+
+/* Base styles for the navbar */
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%; /* Full width */
+    padding: 15px;
+    background-color: #e7f9c6; /* Match the header background */
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 5px; /* Space between items */
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 20px; /* Adjust padding for larger clickable area */
+    background-color: #f1f9e0;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #607942;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: row; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        background-color: #e7f9c6; /* Match the header background */
+        position: absolute;
+        top: 50px; /* Adjust if needed */
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Space between items */
+    }
+
+    nav ul li a {
+        font-size: 12px; /* Adjust font size */
+        padding: 10px 20px; /* Adjust padding */
+        background-color: #f1f9e0; /* Ensure background color is appropriate */
+    }
+
+    .logo-container {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .logo-container h1 {
+        margin: 0; /* Remove default margin */
+    }
+
+    .logo-container h1 a img {
+        display: block;
+        margin: 0 auto; /* Center the logo */
+    }
+}
+
+/* Specific link styling */
+a[href="Commissions.html"] {
+    color: #708944; /* Ensure this specific link is green */
+}
+
+h1 {
+    color: #8ea85d; /* Change 'blue' to any color you prefer */
+  }
+
+.intro-container {
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Optionally set a max-width for larger screens */
+    margin: 100px auto auto; /* Center horizontally with auto margins, and adjust top margin to avoid overlap */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.intro-container .image-wrapper {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center images */
+    justify-content: center; /* Center images horizontally */
+    gap: 10px; /* Adjust spacing between images */
+    margin-bottom: 20px; /* Space between the image row and the GIF */
+}
+
+.intro-container img.intro-image {
+    width: 40%; /* Adjust this percentage to control the size of the main image */
+    max-width: 100%; /* Ensures image does not overflow the container */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.intro-container img.intro-image:hover {
+    transform: rotate(5deg); /* Adjust the degree of rotation to achieve the desired tilt effect */
+}
+
+.intro-container img.side-image {
+    width: 45%; /* Adjust the size of the side images */
+    max-width: 150px; /* Optional: Set a maximum width for the side images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add rounded corners to the side images */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+.intro-container img.side-image:hover {
+    transform: rotate(5deg); /* Adjust the degree of rotation to achieve the desired tilt effect */
+}
+
+.intro-container img.intro-gif {
+    display: block; /* Ensure it is displayed as a block-level element below the images */
+    width: 50%; /* Adjust this percentage to control the size of the GIF */
+    max-width: 200px; /* Optional: Set a maximum width for the GIF */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px auto; /* Center the GIF and add spacing above and below */
+    border-radius: 10px; /* Optional: add rounded corners to the GIF */
+}
+
+.intro-container .icon-wrapper {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Adjust spacing between icons */
+    margin-top: 20px; /* Space between the text and icons */
+}
+
+.intro-container img.icon {
+    width: 50px; /* Adjust size of icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.intro-container h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.intro-container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+.intro-container pre {
+    font-size: 12px;
+}
+
+.icon-wrapper {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center icons horizontally */
+    gap: 20px; /* Adjust spacing between icons */
+    margin-top: 20px; /* Space between the text and icons */
+}
+
+.icon-wrapper a {
+    display: inline-block; /* Ensure anchor tags behave like inline-blocks */
+}
+
+.icon {
+    width: 50px; /* Adjust size */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.icon:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.intro-text {
+    text-align: center; /* Center text and images within the container */
+    color: #607942;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.intro-text.fade-out {
+    opacity: 0;
+    height: 0;
+}
+
+/* Initial state for the new text */
+.intro-text.fade-in {
+    opacity: 0;
+}
+
+/* Final state for the new text */
+.intro-text.loaded {
+    opacity: 1;
+}
+
+.art-text {
+    margin-left: 100px;
+    max-width: 550px;
+    color: #607942;
+    margin-right: 70px;
+}
+
+
+/* Initial state of the container */
+.page-container {
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+/* State when transitioning */
+.page-container.transitioning {
+    opacity: 0;
+    height: 0;
+}
+
+/* State for the new page */
+.page-container.new-page {
+    opacity: 0;
+    height: auto;
+    transition: opacity 0.5s ease 0.5s, height 0.5s ease; /* Delay fade-in */
+}
+
+/* Full-screen loading screen */
+#loading-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #e7f9c6; /* Change background color as needed */
+    background-image: url('kuniloading.png'); /* Path to your background image */
+    background-size: contain; /* Ensures the image covers the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+/* Loader animation */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #8ea85d; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Animation keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Loading image */
+.loading-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+}
+
+
